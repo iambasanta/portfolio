@@ -33,3 +33,126 @@ img{
     height: 100%;
     width: 100%;
 }
+
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.button{
+    cursor: pointer;
+}
+
+#portfolio{
+    padding: 15rem 0 ;
+    height: 100vh;
+    width: 100%;
+}
+
+#portfolio .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* left section */
+#portfolio .container .left{
+    flex: 6;
+}
+
+#portfolio .left .heading{
+    color: var(--text-white);
+    font-weight: 600;
+    font-size: 6rem;
+    line-height: 9rem;
+}
+
+#portfolio .left .description{
+    color: var(--text-gray);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+#portfolio .left .buttons{
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3.75rem;
+}
+
+#portfolio .button{
+    color: var(--text-gray);
+}
+
+#portfolio .button svg{
+    height:48px ;
+    width:48px ;
+}
+
+/* right section */
+#portfolio .container .right{
+    flex: 8;
+}
+
+#portfolio .right {
+    text-align: right;
+}
+
+#portfolio .right img{
+    width: 100%;
+    max-width: 560px;
+    height: 520px; 
+}
+
+@media only screen and (max-width:768px){
+   #portfolio .container{
+        margin: 2rem auto;
+        flex-direction :column-reverse;
+    } 
+
+    #portfolio .container .right{
+        text-align: center;
+    }
+
+    #portfolio .right img{
+        width: 100%;
+        max-width: 300px;
+        height: 260px; 
+    }
+
+    #portfolio .left{
+        margin: 50px;
+        justify-content:center;
+    }
+
+    #portfolio .left .heading{
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    #portfolio .left .description{
+        text-align: center;
+        font-size: 1.25rem ;
+        line-height:2.375rem ;
+    }
+
+    #portfolio .left .buttons{
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #portfolio .button svg{
+        height:32px ;
+        width:32px ;
+    }
+}
+
+@media only screen and(max-width: 950px) {
+    #portfolio .container .right{
+        flex: 6;
+    }
+}
