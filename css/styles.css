@@ -146,51 +146,157 @@ img {
   height: 520px;
 }
 
-@media only screen and (max-width: 768px) {
+/* Mobile devices */
+@media (max-width: 767px) {
+  .intro-section {
+    padding: 10rem 0;
+    height: auto;
+  }
+
   .intro-section .container {
-    margin: 2rem auto;
-    flex-direction: column-reverse;
-  }
-
-  .intro-section .container .right-section {
-    text-align: center;
-  }
-
-  .intro-section .right-section img {
-    width: 100%;
-    max-width: 300px;
-    height: 260px;
-  }
-
-  .intro-section .left-section {
-    margin: 50px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
-  .intro-section .left-section .heading {
+  .intro-section .container .left-section {
+    order: 2;
     text-align: center;
-    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .intro-section .container .right-section {
+    order: 1;
+  }
+
+  .intro-section .left-section .heading {
+    font-size: 4rem;
+    line-height: 6rem;
   }
 
   .intro-section .left-section .description {
-    text-align: center;
-    font-size: 1.25rem;
-    line-height: 2.375rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
   }
 
   .intro-section .left-section .buttons-wrapper {
     justify-content: center;
-    gap: 2rem;
+    align-items: center;
+    gap: 2.5rem;
+    padding-top: 2rem;
   }
 
   .intro-section .button svg {
-    height: 32px;
-    width: 32px;
+    height: 36px;
+    width: 36px;
+  }
+
+  .intro-section .right-section img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
-@media only screen and(max-width: 950px) {
+/* Tablet devices */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .intro-section {
+    padding: 12rem 0;
+    height: auto;
+  }
+
+  .intro-section .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-section .container .left-section {
+    flex: 8;
+    text-align: center;
+    margin-right: 2rem;
+  }
+
   .intro-section .container .right-section {
     flex: 6;
+  }
+
+  .intro-section .left-section .heading {
+    font-size: 5rem;
+    line-height: 8rem;
+  }
+
+  .intro-section .left-section .description {
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+  }
+
+  .intro-section .left-section .buttons-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .intro-section .button svg {
+    height: 42px;
+    width: 42px;
+  }
+
+  .intro-section .right-section img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Larger devices */
+@media (min-width: 1024px) {
+  .intro-section {
+    padding: 15rem 0;
+    height: 100vh;
+  }
+
+  .intro-section .container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .intro-section .container .left-section {
+    flex: 6;
+    text-align: left;
+    margin-right: 2rem;
+  }
+
+  .intro-section .container .right-section {
+    flex: 8;
+  }
+
+  .intro-section .left-section .heading {
+    font-size: 6rem;
+    line-height: 9rem;
+  }
+
+  .intro-section .left-section .description {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  .intro-section .left-section .buttons-wrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3.75rem;
+    padding-top: 3rem;
+  }
+
+  .intro-section .button svg {
+    height: 48px;
+    width: 48px;
+  }
+
+  .intro-section .right-section img {
+    max-width: 560px;
+    height: 520px;
   }
 }
