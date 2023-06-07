@@ -38,10 +38,10 @@ a {
 img {
   height: 100%;
   width: 100%;
-  animation: updown 5s ease-in-out infinite;
+  animation: updown-animation 5s ease-in-out infinite;
 }
 
-@keyframes updown {
+@keyframes updown-animation {
   0% {
     transform: translateY(-20px);
   }
@@ -66,38 +66,38 @@ img {
   cursor: pointer;
 }
 
-#portfolio {
+.intro-section {
   padding: 15rem 0;
   height: 100vh;
   width: 100%;
 }
 
-#portfolio .container {
+.intro-section .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 /* left section */
-#portfolio .container .left {
+.intro-section .container .left-section {
   flex: 6;
 }
 
-#portfolio .left .heading {
+.intro-section .left-section .heading {
   color: var(--text-white);
   font-weight: 600;
   font-size: 6rem;
   line-height: 9rem;
 }
 
-#portfolio .left .description {
+.intro-section .left-section .description {
   color: var(--text-gray);
   font-weight: 500;
   font-size: 2rem;
   line-height: 3rem;
 }
 
-#portfolio .left .buttons {
+.intro-section .left-section .buttons-wrapper {
   padding-top: 3rem;
   display: flex;
   align-items: center;
@@ -105,23 +105,23 @@ img {
   gap: 3.75rem;
 }
 
-#portfolio .button {
+.intro-section .button {
   color: var(--text-gray);
 }
 
-#portfolio .button svg {
+.intro-section .button svg {
   height: 48px;
   width: 48px;
   opacity: 0.75;
   transform: scale(1);
 }
 
-#portfolio .button svg:hover {
+.intro-section .button svg:hover {
   opacity: 1;
-  animation: logo 0.5s ease-in-out infinite alternate;
+  animation: logo-animation 0.5s ease-in-out infinite alternate;
 }
 
-@keyframes logo {
+@keyframes logo-animation {
   0% {
     transform: scale(1);
   }
@@ -132,65 +132,65 @@ img {
 }
 
 /* right section */
-#portfolio .container .right {
+.intro-section .container .right-section {
   flex: 8;
 }
 
-#portfolio .right {
+.intro-section .right-section {
   text-align: right;
 }
 
-#portfolio .right img {
+.intro-section .right-section img {
   width: 100%;
   max-width: 560px;
   height: 520px;
 }
 
 @media only screen and (max-width: 768px) {
-  #portfolio .container {
+  .intro-section .container {
     margin: 2rem auto;
     flex-direction: column-reverse;
   }
 
-  #portfolio .container .right {
+  .intro-section .container .right-section {
     text-align: center;
   }
 
-  #portfolio .right img {
+  .intro-section .right-section img {
     width: 100%;
     max-width: 300px;
     height: 260px;
   }
 
-  #portfolio .left {
+  .intro-section .left-section {
     margin: 50px;
     justify-content: center;
   }
 
-  #portfolio .left .heading {
+  .intro-section .left-section .heading {
     text-align: center;
     font-size: 3rem;
   }
 
-  #portfolio .left .description {
+  .intro-section .left-section .description {
     text-align: center;
     font-size: 1.25rem;
     line-height: 2.375rem;
   }
 
-  #portfolio .left .buttons {
+  .intro-section .left-section .buttons-wrapper {
     justify-content: center;
     gap: 2rem;
   }
 
-  #portfolio .button svg {
+  .intro-section .button svg {
     height: 32px;
     width: 32px;
   }
 }
 
 @media only screen and(max-width: 950px) {
-  #portfolio .container .right {
+  .intro-section .container .right-section {
     flex: 6;
   }
 }
