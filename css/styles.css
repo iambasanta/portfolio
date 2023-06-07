@@ -1,190 +1,196 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 /* variables */
-:root{
-    --text-white :#FFFFFF;
-    --text-gray :#78909C;
-    --text-blue :#53B5FF;
-    --bgc-navy:#25395A;
-    --bgc-denim:#171631;
+:root {
+  --text-white: #ffffff;
+  --text-gray: #78909c;
+  --text-blue: #53b5ff;
+  --bgc-navy: #25395a;
+  --bgc-denim: #171631;
 }
 
 /* global styles */
-*,*::before,*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-    font-family: 'Poppins',sans-serif;
-    font-size: 16px;
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
 }
 
-body{
-    background-image: radial-gradient(circle at 0 2%,var(--bgc-navy),var(--bgc-denim) 124%);
+body {
+  background-image: radial-gradient(
+    circle at 0 2%,
+    var(--bgc-navy),
+    var(--bgc-denim) 124%
+  );
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-img{
-    height: 100%;
-    width: 100%;
-    animation: updown 5s ease-in-out infinite;
+img {
+  height: 100%;
+  width: 100%;
+  animation: updown 5s ease-in-out infinite;
 }
 
-@keyframes updown{
-    0%{
-        transform: translateY(-20px);
-    }
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
 
-    50%{
-        transform: translateY(20px);
-    }
+  50% {
+    transform: translateY(20px);
+  }
 
-    100%{
-        transform: translateY(-20px);
-    }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
-.container{
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    max-width: 1440px;
+.container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
 }
 
-.button{
-    cursor: pointer;
+.button {
+  cursor: pointer;
 }
 
-#portfolio{
-    padding: 15rem 0 ;
-    height: 100vh;
-    width: 100%;
+#portfolio {
+  padding: 15rem 0;
+  height: 100vh;
+  width: 100%;
 }
 
-#portfolio .container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#portfolio .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* left section */
-#portfolio .container .left{
-    flex: 6;
+#portfolio .container .left {
+  flex: 6;
 }
 
-#portfolio .left .heading{
-    color: var(--text-white);
-    font-weight: 600;
-    font-size: 6rem;
-    line-height: 9rem;
+#portfolio .left .heading {
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 6rem;
+  line-height: 9rem;
 }
 
-#portfolio .left .description{
-    color: var(--text-gray);
-    font-weight: 500;
-    font-size: 2rem;
-    line-height: 3rem;
+#portfolio .left .description {
+  color: var(--text-gray);
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
-#portfolio .left .buttons{
-    padding-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 3.75rem;
+#portfolio .left .buttons {
+  padding-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3.75rem;
 }
 
-#portfolio .button{
-    color: var(--text-gray);
+#portfolio .button {
+  color: var(--text-gray);
 }
 
-#portfolio .button svg{
-    height:48px ;
-    width:48px ;
-    opacity: 0.75;
-    transform: scale(1);
+#portfolio .button svg {
+  height: 48px;
+  width: 48px;
+  opacity: 0.75;
+  transform: scale(1);
 }
 
-#portfolio .button svg:hover{
-    opacity: 1;
-    animation: logo 0.5s ease-in-out infinite alternate;
+#portfolio .button svg:hover {
+  opacity: 1;
+  animation: logo 0.5s ease-in-out infinite alternate;
 }
 
 @keyframes logo {
-    0%{
-        transform: scale(1);
-    } 
+  0% {
+    transform: scale(1);
+  }
 
-    100%{
-        transform: scale(1.25);
-    } 
+  100% {
+    transform: scale(1.25);
+  }
 }
 
 /* right section */
-#portfolio .container .right{
-    flex: 8;
+#portfolio .container .right {
+  flex: 8;
 }
 
 #portfolio .right {
-    text-align: right;
+  text-align: right;
 }
 
-#portfolio .right img{
+#portfolio .right img {
+  width: 100%;
+  max-width: 560px;
+  height: 520px;
+}
+
+@media only screen and (max-width: 768px) {
+  #portfolio .container {
+    margin: 2rem auto;
+    flex-direction: column-reverse;
+  }
+
+  #portfolio .container .right {
+    text-align: center;
+  }
+
+  #portfolio .right img {
     width: 100%;
-    max-width: 560px;
-    height: 520px; 
-}
+    max-width: 300px;
+    height: 260px;
+  }
 
-@media only screen and (max-width:768px){
-   #portfolio .container{
-        margin: 2rem auto;
-        flex-direction :column-reverse;
-    } 
+  #portfolio .left {
+    margin: 50px;
+    justify-content: center;
+  }
 
-    #portfolio .container .right{
-        text-align: center;
-    }
+  #portfolio .left .heading {
+    text-align: center;
+    font-size: 3rem;
+  }
 
-    #portfolio .right img{
-        width: 100%;
-        max-width: 300px;
-        height: 260px; 
-    }
+  #portfolio .left .description {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 2.375rem;
+  }
 
-    #portfolio .left{
-        margin: 50px;
-        justify-content:center;
-    }
+  #portfolio .left .buttons {
+    justify-content: center;
+    gap: 2rem;
+  }
 
-    #portfolio .left .heading{
-        text-align: center;
-        font-size: 3rem;
-    }
-
-    #portfolio .left .description{
-        text-align: center;
-        font-size: 1.25rem ;
-        line-height:2.375rem ;
-    }
-
-    #portfolio .left .buttons{
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    #portfolio .button svg{
-        height:32px ;
-        width:32px ;
-    }
+  #portfolio .button svg {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 @media only screen and(max-width: 950px) {
-    #portfolio .container .right{
-        flex: 6;
-    }
+  #portfolio .container .right {
+    flex: 6;
+  }
 }
